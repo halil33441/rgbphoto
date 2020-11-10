@@ -1,7 +1,7 @@
 # rgbphoto
 Webcam Photo R-G-B Histogram chart
 
-Hello this project made by halil.
+Hello, this project made by Halil.
 
 Firstly this is just school project so you can understand that this is not prof. just students project.
 
