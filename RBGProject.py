@@ -10,7 +10,7 @@ Glist = []
 Rlist = []
 
 
-a = input("Lütfen istediğiniz fotoğraf sayısını giriniz.")
+a = input("Please write how many photos you want")
 
 i = 1
 
@@ -20,16 +20,16 @@ while i <= int(a) :
         camera = cv2.VideoCapture(0)
         return_value,image = camera.read()
         
-        cv2.imwrite(datetime.datetime.now().strftime("%Y-%m-%d %H-%M-%S") + ".jpeg", image)   ## Webcam ile çekilen fotoğrafı kayıt eder
+        cv2.imwrite(datetime.datetime.now().strftime("%Y-%m-%d %H-%M-%S") + ".jpeg", image)   ## Saving the photo taken
        
 
         histr1 = cv2.calcHist([image],[0],None,[256],[0,256]) ##blue
         histr2 = cv2.calcHist([image],[1],None,[256],[0,256]) ##green
         histr3 = cv2.calcHist([image],[2],None,[256],[0,256]) ##red
 
-        plt.title('Histogram Chart') ## Grafik ismi
-        plt.xlabel('Intensity Value')  ##  X eksen adı
-        plt.ylabel('Count')  ## Y eksen adı
+        plt.title('Histogram Chart') ## Graph Name
+        plt.xlabel('Intensity Value')  ##  X axis
+        plt.ylabel('Count')  ## Y axis
 
        
         #########################################################
@@ -58,7 +58,7 @@ while i <= int(a) :
         
         
         
-        plt.savefig(datetime.datetime.now().strftime("%Y-%m-%d %H-%M-%S") + ".png")          ## Histogram grafiğini kayıt eder
+        plt.savefig(datetime.datetime.now().strftime("%Y-%m-%d %H-%M-%S") + ".png")          ## Saving Histogram Graph
         plt.show()
         
         
@@ -73,10 +73,10 @@ while i == int(a)+1 :
         min_Blist = min(Blist)
         numb11 = Blist.index(min(Blist))
 
-        print ("Max B değeri:", max_Blist)
-        print ("Kaçıncı Fotoğraf:", numb1+1)
-        print ("Min B değeri:", min_Blist)
-        print ("Kaçıncı Fotoğraf:", numb11+1)
+        print ("Max B :", max_Blist)
+        print ("Which Photo:", numb1+1)
+        print ("Min B :", min_Blist)
+        print ("Which Photo:", numb11+1)
         
 
         
@@ -86,10 +86,10 @@ while i == int(a)+1 :
         min_Glist = min(Glist)
         numb22 = Glist.index(min(Glist))
 
-        print ("Max G değeri:", max_Glist)
-        print ("Kaçıncı Fotoğraf:", numb2+1)
-        print ("Min G değeri:", min_Glist)
-        print ("Kaçıncı Fotoğraf:", numb22+1)
+        print ("Max G :", max_Glist)
+        print ("Which Photo:", numb2+1)
+        print ("Min G :", min_Glist)
+        print ("Which Photo:", numb22+1)
 
         
         print(Rlist)
@@ -98,10 +98,10 @@ while i == int(a)+1 :
         min_Rlist = min(Rlist)
         numb33 = Rlist.index(min(Rlist))
 
-        print ("Max R değeri:", max_Rlist)
-        print ("Kaçıncı Fotoğraf:", numb3+1)
+        print ("Max R :", max_Rlist)
+        print ("Which Photo:", numb3+1)
         print ("Min R değeri:", min_Rlist)
-        print ("Kaçıncı Fotoğraf:", numb33+1)
+        print ("Which Photo:", numb33+1)
 
         i = i+1
         
